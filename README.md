@@ -1,0 +1,2 @@
+# LB-Assignment
+Logic Program
