@@ -1,0 +1,61 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Required Header files
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name : EvenFactorial
+//  Description :   Accept Number from user and find its
+//                  even factorial
+//  Author:         Samruddhi Vinayak Rupanawar
+//  Date :          26/10/2025
+//          
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+int  EvenFactorial(int iNo)
+{
+      int icnt =0;
+      int iFact =0;
+
+      
+    if(iNo < 0)
+    {
+        iNo = -iNo;
+    }
+
+      iFact =1;
+     for(icnt =1; icnt<=iNo; icnt++)
+     {
+          if((icnt%2) == 0)
+          {
+            iFact =iFact*icnt;
+          }
+     }
+  
+     return iFact;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Entry point function for the application
+//
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0;
+    int iRet =0;
+
+    printf("Enter Number :\n");
+    scanf("%d",&iValue);
+
+    iRet =EvenFactorial(iValue);
+    
+    printf("Factorial of %d is %d",iValue,iRet);
+
+    return 0;
+}
